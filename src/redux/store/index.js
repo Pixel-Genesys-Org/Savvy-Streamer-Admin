@@ -2,18 +2,18 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import errorLogger from "../../middlewares/apierror.middleware";
 import successLogger from "../../middlewares/apisuccess.middleware";
-import { appointmentsApi } from "../Apis/Appointment";
-import { authApi } from "../Apis/Auth";
-import { disputeApi } from "../Apis/Dispute";
-import { feedbackApi } from "../Apis/Feedbacks";
-import { generalApi } from "../Apis/General";
-import { listingApi } from "../Apis/Listing";
-import { notificationApi } from "../Apis/Notification";
-import { packageApi } from "../Apis/Package";
-import { quizApi } from "../Apis/Quiz";
-import { userApi } from "../Apis/User";
-import { analyticsApi } from "../Apis/Analytics";
-import { contentApi } from "../Apis/Content";
+import { appointmentsApi } from "../apis/Appointment";
+import { authApi } from "../apis/Auth";
+import { disputeApi } from "../apis/Dispute";
+import { feedbackApi } from "../apis/Feedbacks";
+import { generalApi } from "../apis/General";
+import { listingApi } from "../apis/Listing";
+import { notificationApi } from "../apis/Notification";
+import { packageApi } from "../apis/Package";
+import { quizApi } from "../apis/Quiz";
+import { userApi } from "../apis/User";
+import { analyticsApi } from "../apis/Analytics";
+import { contentApi } from "../apis/Content";
 
 export const store = configureStore({
     reducer: {
