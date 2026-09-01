@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import TableActions from "../../../components/TableActions"
 import useFilters from "../../../middlewares/hooks/useFilters"
-import { useGetFeedbacksQuery } from "../../../redux/Apis/Feedbacks"
+import { useGetFeedbacksQuery } from "../../../redux/apis/Feedbacks"
 
 const useViewFeedbacksController = () => {
 

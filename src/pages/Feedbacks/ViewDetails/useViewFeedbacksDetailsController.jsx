@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { useGetFeedbackByIdQuery } from "../../../redux/Apis/Feedbacks"
+import { useGetFeedbackByIdQuery } from "../../../redux/apis/Feedbacks"
 
 const useViewFeedbacksDetailsController = () => {
 

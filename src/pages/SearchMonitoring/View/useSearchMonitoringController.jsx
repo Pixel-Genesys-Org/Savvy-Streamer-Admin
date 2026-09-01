@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import useFilters from "../../../middlewares/hooks/useFilters"
-import { useGetAnalyticsQuery } from "../../../redux/Apis/Analytics"
+import { useGetAnalyticsQuery } from "../../../redux/apis/Analytics"
 
 const useSearchMonitoringController = () => {
 

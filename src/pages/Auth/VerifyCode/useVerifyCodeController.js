@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { useLocation, useNavigate } from "react-router-dom"
-import { useForgetPasswordMutation, useVerifyCodeMutation } from "../../../redux/Apis/Auth"
+import { useForgetPasswordMutation, useVerifyCodeMutation } from "../../../redux/apis/Auth"
 import { hideEmail } from "../../../utils/helper"
 
 const TIMER = 60

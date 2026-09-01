@@ -5,7 +5,7 @@ import ProfileViewer from "../../../components/ProfileViewer"
 import TableActions from "../../../components/TableActions"
 import { useSwal } from "../../../contexts/SwalContext"
 import useFilters from "../../../middlewares/hooks/useFilters"
-import { useDeleteUserMutation, useGetUsersQuery, useHandleStatusMutation } from "../../../redux/Apis/User"
+import { useDeleteUserMutation, useGetUsersQuery, useHandleStatusMutation } from "../../../redux/apis/User"
 
 const useViewEmployeesController = () => {
 

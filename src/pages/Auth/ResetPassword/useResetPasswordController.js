@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useSetPasswordMutation } from "../../../redux/Apis/Auth";
+import { useSetPasswordMutation } from "../../../redux/apis/Auth";
 import { useEffect } from "react";
 
 const useResetPasswordController = () => {

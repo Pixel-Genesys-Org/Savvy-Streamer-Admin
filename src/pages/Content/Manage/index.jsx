@@ -6,7 +6,7 @@ import DetailsPage from "../../../components/Wrappers/DetailsPage"
 import Dropdown from "../../../components/Dropdown"
 import Input from '../../../components/Input'
 import Button from '../../../components/Button'
-import { useGetContentQuery, useUpdateContentMutation } from "../../../redux/Apis/Content"
+import { useGetContentQuery, useUpdateContentMutation } from "../../../redux/apis/Content"
 import "./index.css"
 import Loader from '../../../components/Loader'
 

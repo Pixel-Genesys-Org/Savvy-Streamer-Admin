@@ -1,4 +1,4 @@
-import { useGetDashboardQuery } from "../../redux/Apis/General";
+import { useGetDashboardQuery } from "../../redux/apis/General";
 import { extractData } from "../../utils/storage"
 
 const useDashboardController = () => {

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useSwal } from "../../../contexts/SwalContext"
-import { useGetUserByIdQuery, useHandleStatusMutation } from "../../../redux/Apis/User"
+import { useGetUserByIdQuery, useHandleStatusMutation } from "../../../redux/apis/User"
 import { useEffect } from "react"
 import { useModal } from "../../../contexts/ModalContext"
 import RejectionReason from "../RejectionReason"

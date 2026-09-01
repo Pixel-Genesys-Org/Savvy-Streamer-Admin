@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { useGetNotificationsQuery } from "../../redux/Apis/Notification"
+import { useGetNotificationsQuery } from "../../redux/apis/Notification"
 
 const useNotificationsController = () => {
 
