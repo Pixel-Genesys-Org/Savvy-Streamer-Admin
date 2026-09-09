@@ -1,0 +1,57 @@
+.quill-editor .ql-toolbar {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(31, 29, 51, 0.85);
+}
+
+.quill-editor .ql-container {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.quill-editor .ql-editor {
+    min-height: 240px;
+    color: #ffffff;
+}
+
+.quill-editor .ql-stroke {
+    stroke: #9CA3AF;
+}
+
+.quill-editor .ql-fill {
+    fill: #9CA3AF;
+}
+
+.quill-editor .ql-picker {
+    color: #e5e7eb;
+}
+
+.quill-editor .ql-picker-options {
+    background: #1F1D33;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.quill-editor .ql-snow .ql-stroke {
+    stroke: #9CA3AF;
+}
+
+.prose,
+.prose p,
+.prose li,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose span,
+.prose strong {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.prose a {
+    color: #6BE0FE;
+}
+
