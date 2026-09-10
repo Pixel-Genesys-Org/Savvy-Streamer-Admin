@@ -47,6 +47,8 @@ const menu = [
   },
 ];
 
+const MARKETING_URL = import.meta.env.VITE_MARKETING_URL || "https://pixelgenesys.com";
+
 const Sidebar = ({ open = false, onClose }) => {
   const [expandedIdx, setExpandedIdx] = useState(null);
   const navigate = useNavigate();
@@ -156,8 +158,19 @@ const Sidebar = ({ open = false, onClose }) => {
         })}
       </div>
 
-      <div className="px-6 pb-6 pt-4 text-center text-sm text-white/55">
-        © {new Date().getFullYear()} Savvy Streamer
+      <div className="mt-auto space-y-2 px-6 pb-6 pt-4 text-center">
+        <div className="space-y-1">
+          <p className="text-sm text-white/70">Designed and Developed By</p>
+          <a
+            href={MARKETING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-base font-bold text-white transition-colors hover:text-cyan"
+          >
+            Pixel Genesys LLC
+          </a>
+        </div>
+        <p className="text-sm text-white/55">© {new Date().getFullYear()} Savvy Streamer</p>
       </div>
     </div>
   );
