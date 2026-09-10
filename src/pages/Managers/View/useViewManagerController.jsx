@@ -75,7 +75,12 @@ const useViewManagerController = () => {
         },
         {
             label: 'Profile Status',
-            render: (row) => <Badge type={row?.status === "pending" ? "warning" : "danger"} text={row?.status} />
+            render: (row) =>
+                row?.status ? (
+                    <Badge type={row.status === "pending" ? "warning" : "danger"} text={row.status} />
+                ) : (
+                    "-"
+                )
         },
         {
             label: 'Status',

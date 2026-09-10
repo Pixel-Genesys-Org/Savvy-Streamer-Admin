@@ -6,8 +6,8 @@ const ProfileViewer = ({ name = "", email = "", picture }) => {
     <div className="flex items-center space-x-3">
       <Avatar src={picture} name={name} />
       <div className="min-w-0">
-        <h2 className="truncate text-sm font-medium text-white">{name}</h2>
-        <p className="truncate text-sm text-muted">{email}</p>
+        <h2 className="truncate text-sm font-medium text-white">{name || "-"}</h2>
+        <p className="truncate text-sm text-muted">{email || "-"}</p>
       </div>
     </div>
   );

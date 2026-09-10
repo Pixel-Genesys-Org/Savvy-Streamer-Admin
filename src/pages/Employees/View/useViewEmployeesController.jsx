@@ -71,7 +71,24 @@ const useViewEmployeesController = () => {
         },
         {
             label: 'Phone',
-            render: (row) => <p>{row?.dialing_code} {row?.phone}</p>
+            render: (row) => {
+                const phone = [row?.dialing_code, row?.phone].filter(Boolean).join(" ")
+                return phone || "-"
+            }
+        },
+        {
+            label: 'Sign-in Method',
+            render: (row) => {
+
+                const labels = {
+                    email: "Email",
+                    google: "Google",
+                    apple: "Apple",
+                }
+
+                return labels[row?.auth_provider] || row?.auth_provider || "-"
+
+            }
         },
         {
             label: 'Status',

@@ -12,10 +12,10 @@ const STATUS_FILTERS = [
 ]
 
 const formatPeriod = (start, end) => {
-    if (!start && !end) return "—"
+    if (!start && !end) return "-"
 
-    const from = start ? dateFormatter(start, { time: false }) : "—"
-    const to = end ? dateFormatter(end, { time: false }) : "—"
+    const from = start ? dateFormatter(start, { time: false }) : "-"
+    const to = end ? dateFormatter(end, { time: false }) : "-"
 
     return `${from} – ${to}`
 }
@@ -48,7 +48,7 @@ const usePaymentLogsController = () => {
         },
         {
             label: "Package",
-            render: (row) => <p>{row?.package_name || "Subscription"}</p>
+            render: (row) => <p>{row?.package_name || "-"}</p>
         },
         {
             label: "Amount",
@@ -60,7 +60,7 @@ const usePaymentLogsController = () => {
             render: (row) => (
                 <Badge
                     type={row?.status === "paid" ? "success" : "danger"}
-                    text={row?.status || "—"}
+                    text={row?.status || "-"}
                 />
             )
         },

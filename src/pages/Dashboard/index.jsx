@@ -114,6 +114,38 @@ const Dashboard = () => {
           </div>
 
           <div className="mt-8">
+            <p className="mb-4 font-heading text-lg font-semibold text-white">Subscription Earnings</p>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <SummaryCard
+                title="Total Earned"
+                value={formatCurrency(totalEarned)}
+                icon={CircleDollarSign}
+                accent="bg-success/40"
+              />
+              <SummaryCard
+                title="This Month"
+                value={formatCurrency(thisMonthEarned)}
+                icon={CalendarDays}
+                accent="bg-cyan/40"
+              />
+              <SummaryCard
+                title="Paid"
+                value={paidCount}
+                icon={Receipt}
+                accent="bg-primary/40"
+              />
+              <SummaryCard
+                title="Failed"
+                value={failedCount}
+                icon={Ban}
+                accent="bg-error/40"
+              />
+            </div>
+          </div>
+
+          <DashboardCharts charts={values.data?.charts} />
+
+          <div className="mt-8">
             <p className="mb-4 font-heading text-lg font-semibold text-white">Search Monitoring</p>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
               <SummaryCard
@@ -145,38 +177,6 @@ const Dashboard = () => {
               <TopSearchesChart titles={values.data?.charts?.top_searches} />
             </div>
           </div>
-
-          <div className="mt-8">
-            <p className="mb-4 font-heading text-lg font-semibold text-white">Subscription Earnings</p>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              <SummaryCard
-                title="Total Earned"
-                value={formatCurrency(totalEarned)}
-                icon={CircleDollarSign}
-                accent="bg-success/40"
-              />
-              <SummaryCard
-                title="This Month"
-                value={formatCurrency(thisMonthEarned)}
-                icon={CalendarDays}
-                accent="bg-cyan/40"
-              />
-              <SummaryCard
-                title="Paid"
-                value={paidCount}
-                icon={Receipt}
-                accent="bg-primary/40"
-              />
-              <SummaryCard
-                title="Failed"
-                value={failedCount}
-                icon={Ban}
-                accent="bg-error/40"
-              />
-            </div>
-          </div>
-
-          <DashboardCharts charts={values.data?.charts} />
         </>
       )}
     </div>

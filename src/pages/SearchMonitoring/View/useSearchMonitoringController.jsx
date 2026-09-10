@@ -32,7 +32,7 @@ const ShowTitle = ({ name, poster }) => (
                 </div>
             )}
         </div>
-        <p className="truncate font-medium text-white">{name || "Untitled"}</p>
+        <p className="truncate font-medium text-white">{name || "-"}</p>
     </div>
 )
 

@@ -5,6 +5,30 @@ import { dateFormatter, formatCurrency, getNestedValue } from "../../utils/helpe
 import Loader from "../Loader";
 import TablePagination from "../TablePagination";
 
+const EMPTY_CELL = "-";
+
+const isEmptyValue = (value) =>
+  value === null || value === undefined || value === "";
+
+const getCellContent = (col, row) => {
+  if (col.render) {
+    const content = col.render(row);
+    return isEmptyValue(content) ? EMPTY_CELL : content;
+  }
+
+  if (col?.type === "date" || col?.type === "dateonly") {
+    return dateFormatter(row[col.key], { time: col?.type === "date" }) || EMPTY_CELL;
+  }
+
+  if (col?.type === "price") {
+    const amount = row[col.key];
+    return isEmptyValue(amount) ? EMPTY_CELL : formatCurrency(amount);
+  }
+
+  const value = getNestedValue(row, col.key);
+  return isEmptyValue(value) ? EMPTY_CELL : value;
+};
+
 const Table = ({ serial_no = true, columns = [], data = [], header = null, loading = false, pagination = null }) => {
   let headers = [];
 
@@ -53,13 +77,7 @@ const Table = ({ serial_no = true, columns = [], data = [], header = null, loadi
                       key={ind}
                       className={`border-b border-white/10 p-3 text-left align-middle text-sm text-white/80 sm:p-4 ${col?.capitalize ? "capitalize" : ""}`}
                     >
-                      {col.render
-                        ? col.render(row)
-                        : col?.type === "date" || col?.type === "dateonly"
-                          ? dateFormatter(row[col.key], { time: col?.type === "date" })
-                          : col?.type === "price"
-                            ? formatCurrency(row[col.key])
-                            : getNestedValue(row, col.key)}
+                      {getCellContent(col, row)}
                     </td>
                   ))}
                 </tr>
