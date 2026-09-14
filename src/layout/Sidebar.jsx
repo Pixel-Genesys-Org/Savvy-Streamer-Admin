@@ -158,7 +158,7 @@ const Sidebar = ({ open = false, onClose }) => {
         })}
       </div>
 
-      <div className="mt-auto space-y-2 px-6 pb-6 pt-4 text-center">
+      {/* <div className="mt-auto space-y-2 px-6 pb-6 pt-4 text-center">
         <div className="space-y-1">
           <p className="text-sm text-white/70">Designed and Developed By</p>
           <a
@@ -171,7 +171,7 @@ const Sidebar = ({ open = false, onClose }) => {
           </a>
         </div>
         <p className="text-sm text-white/55">© {new Date().getFullYear()} Savvy Streamer</p>
-      </div>
+      </div> */}
     </div>
   );
 
